@@ -1,0 +1,48 @@
+{% from '../textline/textline.njk' import textline %}
+
+<div class="hero">
+  <div class="hero__container">
+    <div class="socials hidden sm:flex flex-col items-center justify-between">
+      <span class="socials__follow font-bold text-xs md:text-sm lg:text-lg cursor-default selection-bg-text mb-6">Follow us</span>
+      <div class="flex flex-col justify-between">
+        <div class="socials__link mb-8">
+          {% include './instagram-link.njk' %}
+        </div>
+        <div class="socials__link">
+          {% include './twitter-link.njk' %}
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-[860px] 2xl:max-w-[950px] sm:pl-10">
+      <div>
+        {{textline({text: 'A hiking guide', lineMarginRight: 'mr-8'})}}
+      </div>
+      <h1 class="py-8 font-chronicle text-5xl leading-[50px] sm:leading-[60px] md:text-6xl md:leading-[70px] lg:text-7xl lg:leading-[90px] 2xl:text-[88px] 2xl:leading-[100px] tracking-[0.5px] selection-text">Be Prepared For The Mountains And Beyond!</h1>
+      <button class="scroll-down-btn flex font-bold hover-default select-none">
+        <span class="mr-4 leading-6 tracking-wide selection-text">scroll down</span>
+        {% include './arrow_downward.njk' %}
+      </button>
+    </div>
+
+    <div class="hidden sm:flex sm:ml-2 xl:ml-0">
+      <div class="flex flex-col justify-between items-end pr-5 md:pr-8">
+        <a href="#" class="slider__link">Start</a>
+        <button class="slider__link link-to-article">01</button>
+        <button class="slider__link link-to-article">02</button>
+        <button class="slider__link link-to-article">03</button>
+      </div>
+      <div class="w-1">
+        <div class="bg-white h-1/4"></div>
+        <div class="bg-white h-3/4 opacity-50"></div>
+      </div>
+      
+    </div>
+  </div>
+  {% image './src/images/background.jpeg',
+  { 
+      alt: 'bg',
+      class: 'hidden sm:block absolute top-0 left-0 z-[-1] select-none'
+  }
+   %}
+</div>

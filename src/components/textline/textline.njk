@@ -1,0 +1,6 @@
+{% macro textline(props) %}
+  <div class="h-6 flex items-center font-extrabold uppercase selection-bg-text">
+    <div class="w-12 sm:w-[72px] h-[2px] bg-smooth-yellow {{props.lineMarginRight}}"></div>
+    <h5 class="text-xs md:text-base 2xl:text-lg text-smooth-yellow tracking-[6px] ">{{props.text}}</h5>
+  </div>
+{% endmacro %}

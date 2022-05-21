@@ -1,0 +1,18 @@
+{% extends './_layouts/base.njk' %}
+
+{% block title %}
+  MNTN
+{% endblock %}
+
+{% block content %}
+<div class="page-home">
+  {% include './components/header/header.njk' %}
+  {% include './components/hero/hero.njk' %}
+  
+  <div class="page-home__container">
+    {% include './components/content/content.njk' %}
+    {% include './components/footer/footer.njk' %}
+  </div>
+</div> 
+{% endblock %}
+

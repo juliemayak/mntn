@@ -1,0 +1,20 @@
+{% from '../textline/textline.njk' import textline %}
+
+{% macro article(props) %}
+  <section id="{{props.articleNum}}" class="article flex justify-between items-start lg:items-center mb-20 sm:mb-32 lg:mb-[200px] flex-col-reverse lg:flex-row {% if props.isReversed %} lg:flex-row-reverse {% endif %}">
+
+    <div class="article__info lg:pl-0 xl:pl-[150px] relative {% if props.isReversed %} lg:ml-6 {% else %} lg:mr-6 {% endif %} duration-100 ease-linear">
+        <div class="absolute leading-none -left-16 lg:left-0 text-center font-bold text-[190px] sm:text-[240px] opacity-10 select-none {% if props.isReversed %} xl:top-[-88px] {% else %} xl:-top-6 {% endif %} -top-10">{{ props.articleNum }}</div>
+        <div class="{% if props.isReversed %} 2xl:mb-7 {% else %} xl:mb-[154px] {% endif %} mb-10">
+          {{ textline({ text: props.textlineText, lineMarginRight: 'mr-6'})}}   
+        </div>  
+        <h1 class="max-w-[555px] mb-[27px] font-chronicle font-semibold text-5xl leading-[50px] xs:leading-[60px] sm:text-[64px] sm:leading-[77px] selection-text">{{ props.articleTitle }}</h1>
+
+        <p class="max-w-[632px] mb-7 font-bold text-lg leading-8 selection-bg-text">{{ props.articleText }}</p>
+        {% include '../more/more.njk'%}
+    </div>
+    <div class="max-w-[306px] sm:max-w-[406px] lg:max-w-[566px] mb-10 lg:m-0">
+     <img src="{{ props.imageSrc }}" alt="{{ props.imageAlt }}" class="select-none"/>
+    </div>
+  </section>
+{% endmacro %}

@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header__wrapper">
+    <a href="#" id="logo" class="font-chronicle text-2xl md:text-[32px] leading-9 tracking-wider select-none">MNTN</a>
+    <nav class="hidden sm:flex font-bold text-xs md:text-base lg:text-lg pr-4">
+      <ul class="nav flex">
+        <li class="nav__link mr-10">
+          <a href="#">Equipment</a>
+        </li>
+        <li class="nav__link mr-10">
+          <a href="#">About us</a>
+        </li>
+        <li class="nav__link">
+          <a href="#">Blog</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="hidden sm:block hover-default">
+      <a href="#" class="flex items-center text-xs md:text-base lg:text-base font-bold">
+        {% include './account-circle.njk' %}
+        <span class="pl-3 h-4 md:h-5 selection-bg-text">Account</span>
+      </a>
+    </div>
+    <button class="menu-button sm:hidden cursor-pointer hover-opacity" menu-burger>
+      <div class="menu-button__line line-1"></div>
+      <div class="menu-button__line line-2"></div>
+      <div class="menu-button__line line-3"></div>
+    </button>
+    </div>
+</header>

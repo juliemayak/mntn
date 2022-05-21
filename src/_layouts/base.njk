@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>{% block title %}{% endblock %} | Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    @font-face {
+        font-family: "ChronicleDisplay";
+        font-weight: 400;
+        src: local("ChronicleDisplay-Regular"), url("./fonts/ChronicleDisplay-Regular.woff2") format("woff2"), url("./fonts/ChronicleDisplay-Regular.woff") format("woff");
+    }
+    @font-face {
+        font-family: "ChronicleDisplay";
+        font-weight: 600;
+        src: local("ChronicleDisplay-Semibold"), url("./fonts/ChronicleDisplay-Semibold.woff2") format("woff2"), url("./fonts/ChronicleDisplay-Semibold.woff") format("woff");
+    }
+     @font-face {
+        font-family: "Gilroy";
+        font-weight: 400;
+        src: local("Gilroy-Regular"), url("./fonts/Gilroy-Regular.woff2") format("woff2"), url("./fonts/Gilroy-Regular.woff") format("woff");
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-weight: 500;
+        src: local("Gilroy-Medium"), url("./fonts/Gilroy-Medium.woff2") format("woff2"), url("./fonts/Gilroy-Medium.woff") format("woff");
+    }
+     @font-face {
+        font-family: "Gilroy";
+        font-weight: 700;
+        src: local("Gilroy-Bold"), url("./fonts/Gilroy-Bold.woff2") format("woff2"), url("./fonts/Gilroy-Bold.woff") format("woff");
+    }
+     @font-face {
+        font-family: "Gilroy";
+        font-weight: 800;
+        src: local("Gilroy-Extrabold"), url("./fonts/Gilroy-Extrabold.woff2") format("woff2"), url("./fonts/Gilroy-Extrabold.woff") format("woff");
+    }
+  </style>
+
+  {% block stylesheets %}
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  {% endblock stylesheets %}
+</head>
+
+<body>
+
+{% block content %}
+{% endblock content %}
+
+{% include '../components/nav-mobile/nav-mobile.njk' %}
+
+
+{% block scripts %}
+  <script src="/js/bundle.js"></script>
+{% endblock scripts %}
+</body>
+</html>

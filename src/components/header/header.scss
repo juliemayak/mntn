@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  max-width: inherit;
+  padding: 10px 20px;
+  transition: ease 0.4s;
+
+  @include media-sm {
+    padding: 15px 50px;
+  }
+
+  @include media-md {
+    padding-right: 82px;
+    padding-left: 82px;
+  }
+
+  @include media-lg {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include media-2xl {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &--scrolled {
+    background-color: $dark-blue;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu-button {
+  opacity: 1;
+  user-select: none;
+
+  &__line {
+    width: 48px;
+    height: 1.5px;
+    margin: 8px;
+    background-color: #fff;
+    pointer-events: none;
+  }
+}

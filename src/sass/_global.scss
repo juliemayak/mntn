@@ -1,0 +1,24 @@
+.transition-active {
+  transition: color $default-transition-duration $default-transition-function,
+    background $default-transition-duration $default-transition-function,
+    border-color $default-transition-duration $default-transition-function,
+    opacity $default-transition-duration $default-transition-function;
+}
+
+.transition-hover {
+  transition: none;
+}
+
+body {
+  @include font-family-sans;
+  background-color: $dark-blue;
+  color: #fff;
+  font-family: 'Gilroy', serif, Helvetica, Arial;
+
+  &.lock-position {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+}

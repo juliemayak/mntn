@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  padding: 110px 20px;
+  background: url('../images/background.jpeg');
+  background-position: 20% top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-sm {
+    height: auto;
+    padding: 130px 40px;
+    background: none;
+  }
+
+  @include media-md {
+    padding: 170px 80px;
+  }
+
+  @include media-lg {
+    height: 100vh;
+  }
+
+  @include media-xl {
+    padding-top: 240px;
+  }
+
+  @include media-2xl {
+    padding-top: 287px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.socials {
+  &__follow {
+    writing-mode: vertical-rl;
+  }
+}
